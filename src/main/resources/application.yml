@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: coupon
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+
+mybatis-plus:
+  type-aliases-package: com.kojuju.coupon.user.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
